@@ -9,6 +9,7 @@ variable "object" {
   })) })
 }
 
+
 variable "list" {
   type = list(object({
     count  = number
