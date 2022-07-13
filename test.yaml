@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A simple function.
+Parameters:
+  Name:
+    Type: String
+Resources:
+  IRI:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: /
+      Roles: ["ItamarTestRole"]
+  Function:
+    Type: AWS::Lambda::Function
+    Properties:
+      Architectures:
+        - x86_64
+      Handler: index.handler
+      Role: "ItamarTestRole"
+      Runtime: nodejs16.x
+      Code:
+        ZipFile:
+          Fn::Sub: |
+            exports.handler = async (event, context) => {
+                return {
+                        'statusCode': 200,
+                        'body': JSON.stringify({
+                            message: 'hello world!!! I\'m ${Name}.',
+                        })
+                    };
+            };
+Outputs:
+  FunctionArn:
+    Value:
+      Fn::GetAtt:
+        - Function
+        - Arn
