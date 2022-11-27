@@ -3,6 +3,4 @@ deploy:
     steps:
       terraformInit:
         after:
-          - cp badssl.com.cer /usr/local/share/ca-certificates/my-cert.crt
-          - update-ca-certificates
           - curl "https://self-signed.badssl.com/"
