@@ -1,0 +1,56 @@
+version: 2
+
+deploy:
+  onSuccess:
+    - echo deploy-onSuccess-string
+    - name: deploy-onSuccess-object
+      run: echo baz1
+  onFailure:
+    - echo deploy-onFailure-string
+    - name: deploy-onFailure-object
+      run: echo baz2
+  onCompletion:
+    - echo deploy-onCompletion-string
+    - name: deploy-onCompletion-object
+      run: echo baz3
+  steps:
+    terraformInit:
+      before:
+        - echo deploy-before-terraformInit-string
+        - name: deploy-before-terraformInit-object1
+          run: echo foo
+        - name: deploy-before-terraformInit-object2
+          run: echo bar
+      after:
+        - name: deploy-after-terraformInit-object1
+          run: echo foo
+        - name: deploy-after-terraformInit-object2
+          run: echo bar
+        - echo deploy-after-terraformInit-string
+destroy:
+  onSuccess:
+    - echo destroy-onSuccess-string
+    - name: destroy-onSuccess-object
+      run: echo baz1
+  onFailure:
+    - echo destroy-onFailure-string
+    - name: destroy-onFailure-object
+      run: echo baz2
+  onCompletion:
+    - echo destroy-onCompletion-string
+    - name: destroy-onCompletion-object
+      run: echo baz3
+  steps:
+    terraformInit:
+      before:
+        - echo destroy-before-terraformInit-string
+        - name: destroy-before-terraformInit-object1
+          run: echo foo
+        - name: destroy-before-terraformInit-object2
+          run: echo bar
+      after:
+        - name: destroy-after-terraformInit-object1
+          run: echo foo
+        - name: destroy-after-terraformInit-object2
+          run: echo bar
+        - echo destroy-after-terraformInit-string
