@@ -4,7 +4,10 @@ deploy:
   onSuccess:
     - echo deploy-onSuccess-string
     - name: deploy-onSuccess-object
-      run: echo baz1
+      run: |
+        echo baz1
+        echo baz1
+        echo baz1
   onFailure:
     - echo deploy-onFailure-string
     - name: deploy-onFailure-object
@@ -12,7 +15,9 @@ deploy:
   onCompletion:
     - echo deploy-onCompletion-string
     - name: deploy-onCompletion-object
-      run: echo baz3
+      run: echo $baz3
+      env:
+        baz3: gili the king
   steps:
     terraformInit:
       before:
