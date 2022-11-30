@@ -15,9 +15,12 @@ deploy:
   onCompletion:
     - echo deploy-onCompletion-string
     - name: deploy-onCompletion-object
-      run: echo $baz3
+      run: |
+        echo $baz3
+        echo $baz4
       env:
         baz3: gili the king
+        baz4: $ENV0_TEMPLATE_ID
   steps:
     terraformInit:
       before:
