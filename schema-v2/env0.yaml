@@ -3,7 +3,7 @@ version: 2
 deploy:
   onSuccess:
     - echo deploy-onSuccess-string
-    - name: deploy-onSuccess-object
+    - name: Multiple commands step
       run: |
         echo baz1
         echo baz1
@@ -14,7 +14,7 @@ deploy:
       run: echo baz2
   onCompletion:
     - echo deploy-onCompletion-string
-    - name: deploy-onCompletion-object
+    - name: Step with custom env vars
       run: |
         echo $baz3
         echo $baz4
@@ -25,7 +25,7 @@ deploy:
     terraformInit:
       before:
         - use: https://github.com/GiliFaroEnv0/test-plugin.git@v1.1.1
-          name: test-plugin
+          name: Using a plugin
         - echo deploy-before-terraformInit-string
         - name: deploy-before-terraformInit-object1
           run: echo foo
