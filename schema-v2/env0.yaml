@@ -26,6 +26,9 @@ deploy:
       before:
         - use: https://github.com/GiliFaroEnv0/test-plugin.git
           name: test-plugin
+          inputs:
+            flags: bar
+            query: bar
         - echo deploy-before-terraformInit-string
         - name: deploy-before-terraformInit-object1
           run: echo foo
