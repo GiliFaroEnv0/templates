@@ -29,12 +29,27 @@ deploy:
           inputs:
             path: bar
             query: bar
+       - use: https://github.com/GiliFaroEnv0/test-plugin.git@v1.1.1
+         name: test-plugin2
+         inputs:
+            path: bar
+            query: bar
         - echo deploy-before-terraformInit-string
         - name: deploy-before-terraformInit-object1
           run: echo foo
         - name: deploy-before-terraformInit-object2
           run: echo bar
       after:
+        - use: https://github.com/GiliFaroEnv0/test-plugin.git@v1.1.1
+          name: test-plugin3
+          inputs:
+            path: bar
+            query: bar
+       - use: https://github.com/GiliFaroEnv0/test-plugin.git
+          name: test-plugin4
+          inputs:
+            path: bar
+            query: bar    
         - name: deploy-after-terraformInit-object1
           run: echo foo
         - name: deploy-after-terraformInit-object2
