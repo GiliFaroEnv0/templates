@@ -17,21 +17,12 @@ environments:
     revision: 'master'
     needs:
       - 'root1'
-  '2':
-    name: '2'
-    templateName: 'null-resource-1'
-    workspace: '2'
-    revision: 'master'
-    needs:
-      - 'root2'
-      - 'root1'
   '3':
     name: '3'
     templateName: 'null-resource-1'
     workspace: '3'
     revision: 'master'
     needs:
-      - '2'
       - '1'
   '4':
     name: '4'
@@ -39,16 +30,7 @@ environments:
     workspace: '4'
     revision: 'master'
     needs:
-      - '2'
       - '3'
-  '5':
-    name: '5'
-    templateName: 'null-resource-1'
-    workspace: '5'
-    revision: 'master'
-    needs:
-      - '4'
-      - '1'
   '6':
     name: '6'
     templateName: 'null-resource-1'
@@ -56,6 +38,5 @@ environments:
     revision: 'master'
     needs:
       - '4'
-      - '2'
 settings:
   environmentRemovalStrategy: 'destroy'
