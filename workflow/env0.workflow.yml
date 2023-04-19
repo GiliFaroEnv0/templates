@@ -3,20 +3,25 @@ environments:
     name: 'root1'
     templateName: 'null-resource-1'
     workspace: 'root123521123-gili'
+    revision: 'master'
   'root2':
     name: 'root2'
     templateName: 'null-resource-1'
     workspace: 'root123-gili'
+    revision: 'master'
+
   '1':
     name: '1'
     templateName: 'null-resource-1'
     workspace: '1'
+    revision: 'master'
     needs:
       - 'root1'
   '2':
     name: '2'
     templateName: 'null-resource-1'
     workspace: '2'
+    revision: 'master'
     needs:
       - 'root2'
       - 'root1'
@@ -24,6 +29,7 @@ environments:
     name: '3'
     templateName: 'null-resource-1'
     workspace: '3'
+    revision: 'master'
     needs:
       - '2'
       - '1'
@@ -31,6 +37,7 @@ environments:
     name: '4'
     templateName: 'null-resource-1'
     workspace: '4'
+    revision: 'master'
     needs:
       - '2'
       - '3'
@@ -38,6 +45,7 @@ environments:
     name: '5'
     templateName: 'null-resource-1'
     workspace: '5'
+    revision: 'master'
     needs:
       - '4'
       - '1'
@@ -45,6 +53,7 @@ environments:
     name: '6'
     templateName: 'null-resource-1'
     workspace: '6'
+    revision: 'master'
     needs:
       - '4'
       - '2'
