@@ -1,6 +1,10 @@
 version: 1
 deploy:
     steps:
+      setupVariables:
+        after:
+          - 'echo -e "Generated \"backend.tf\": \n$(cat backend.tf)"'
+          - echo echo
       serverlessVersion:
         after:
           - 'echo echo'
@@ -13,6 +17,10 @@ deploy:
 
 destroy:
   steps:
+    setupVariables:
+      after:
+        - 'echo -e "Generated \"backend.tf\": \n$(cat backend.tf)"'
+        - echo echo
     serverlessVersion:
       after:
         - 'echo echo'
