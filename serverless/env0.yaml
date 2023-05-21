@@ -1,0 +1,24 @@
+version: 1
+deploy:
+    steps:
+    serverlessVersion:
+      after:
+        - 'echo echo'
+    serverlessPackage:
+      after:
+        - 'echo echo'
+    serverlessDeploy:
+      after:
+        - 'echo echo'
+
+destroy:
+  steps:
+    serverlessVersion:
+      after:
+        - 'echo echo'
+    serverlessPackage:
+      after:
+        - 'echo echo'
+    serverlessRemove:
+      after:
+        - 'echo echo'
