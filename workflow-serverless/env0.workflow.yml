@@ -1,0 +1,42 @@
+environments:
+  'root1':
+    name: 'root1'
+    templateName: 'deploy some serverless'
+    workspace: 'root123521123-gili'
+    revision: 'master'
+  'root2':
+    name: 'root2'
+    templateName: 'deploy some serverless'
+    workspace: 'root123-gili'
+    revision: 'master'
+
+  '1':
+    name: '1'
+    templateName: 'deploy some serverless'
+    workspace: '1'
+    revision: 'master'
+    needs:
+      - 'root1'
+  '3':
+    name: '3'
+    templateName: 'deploy some serverless'
+    workspace: '3'
+    revision: 'master'
+    needs:
+      - '1'
+  '4':
+    name: '4'
+    templateName: 'deploy some serverless'
+    workspace: '4'
+    revision: 'master'
+    needs:
+      - '3'
+  '6':
+    name: '6'
+    templateName: 'deploy some serverless'
+    workspace: '6'
+    revision: 'master'
+    needs:
+      - '4'
+settings:
+  environmentRemovalStrategy: 'destroy'
