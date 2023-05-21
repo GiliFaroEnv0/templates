@@ -38,5 +38,3 @@ environments:
     revision: 'master'
     needs:
       - '4'
-settings:
-  environmentRemovalStrategy: 'destroy'
