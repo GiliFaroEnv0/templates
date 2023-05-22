@@ -5,11 +5,11 @@ deploy:
         after:
           - 'echo echo'
       serverlessPackage:
-      after:
-        - 'echo echo'
-    serverlessDeploy:
-      after:
-        - 'echo echo'
+        after:
+          - 'echo echo'
+      serverlessDeploy:
+        after:
+          - 'echo echo'
 
 destroy:
   steps:
