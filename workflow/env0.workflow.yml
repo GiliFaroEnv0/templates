@@ -3,40 +3,38 @@ environments:
     name: 'root1'
     templateName: 'null-resource-1'
     workspace: 'root123521123-gili'
-    revision: 'master'
+    revision: 'main'
   'root2':
     name: 'root2'
     templateName: 'null-resource-1'
     workspace: 'root123-gili'
-    revision: 'master'
+    revision: 'main'
 
   '1':
     name: '1'
     templateName: 'null-resource-1'
     workspace: '1'
-    revision: 'master'
+    revision: 'main'
     needs:
       - 'root1'
   '3':
     name: '3'
     templateName: 'null-resource-1'
     workspace: '3'
-    revision: 'master'
+    revision: 'main'
     needs:
       - '1'
   '4':
     name: '4'
     templateName: 'null-resource-1'
     workspace: '4'
-    revision: 'master'
+    revision: 'main'
     needs:
       - '3'
   '6':
     name: '6'
     templateName: 'null-resource-1'
     workspace: '6'
-    revision: 'master'
+    revision: 'main'
     needs:
       - '4'
-settings:
-  environmentRemovalStrategy: 'destroy'
