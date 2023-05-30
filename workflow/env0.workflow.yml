@@ -2,39 +2,39 @@ environments:
   'root1':
     name: 'root1'
     templateName: 'null-resource-1'
-    workspace: 'root123521123-gili'
+    workspace: 'root123521123-gili1'
     revision: 'main'
   'root2':
     name: 'root2'
     templateName: 'null-resource-1'
-    workspace: 'root123-gili'
+    workspace: 'root123-gili1'
     revision: 'main'
 
   '1':
     name: '1'
     templateName: 'null-resource-1'
-    workspace: '1'
+    workspace: '12'
     revision: 'main'
     needs:
       - 'root1'
   '3':
     name: '3'
     templateName: 'null-resource-1'
-    workspace: '3'
+    workspace: '32'
     revision: 'main'
     needs:
       - '1'
   '4':
     name: '4'
     templateName: 'null-resource-1'
-    workspace: '4'
+    workspace: '42'
     revision: 'main'
     needs:
       - '3'
   '6':
     name: '6'
     templateName: 'null-resource-1'
-    workspace: '6'
+    workspace: '62'
     revision: 'main'
     needs:
       - '4'
