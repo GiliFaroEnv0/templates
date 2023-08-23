@@ -31,3 +31,10 @@ environments:
     revision: 'main'
     needs:
       - '3'
+  '6':
+    name: '6'
+    templateName: 'null-resource-1'
+    workspace: '42'
+    revision: 'main'
+    needs:
+      - '4'
