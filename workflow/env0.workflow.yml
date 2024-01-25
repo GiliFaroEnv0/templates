@@ -2,11 +2,11 @@ environments:
   'root1':
     name: 'root1'
     templateName: 'null-resource-1'
-    workspace: 'root32'
+    workspace: 'roovcxz345345345432f23ft32'
     revision: 'main'
   'root2':
     name: 'root2'
     templateName: 'null-resource-1'
-    workspace: 'ro1233321'
+    workspace: 'ro12323423f23f6542f2f23v34f34fv3321'
     revision: 'main'
     needs: [ root1 ]
