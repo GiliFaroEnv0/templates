@@ -8,6 +8,7 @@ environments:
     name: 'root2'
     vcs:
       type: 'terraform'
+      terraformVersion: 'latest'
       repository: 'https://github.com/GiliFaroEnv0/templates'
       path: 'null-resource'
       githubInstallationId: 21448713.00
