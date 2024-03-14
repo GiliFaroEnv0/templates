@@ -6,7 +6,10 @@ environments:
     revision: 'main'
   'root2':
     name: 'root2'
-    templateName: 'null-resource-1'
+    vcs:
+      type: 'github'
+      owner: 'owner'
+      repo: 'repo'
     workspace: 'ro12323423f23f6542f2f23v34f34fv3321'
     revision: 'main'
     needs: [ root1 ]
