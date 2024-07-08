@@ -5,3 +5,6 @@ deploy:
         after:
           - 'echo -e "Generated \"backend.tf\": \n$(cat backend.tf)"'
           - echo echo
+      terraformApply:
+          before:
+            - exit 1
