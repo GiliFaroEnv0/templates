@@ -2,10 +2,10 @@ environments:
   'root1':
     name: 'root1'
     templateName: 'null-resource-1'
-    workspace: 'root123521123-gili1'
+    workspace: 'root1235211233123-gili1'
     revision: 'main'
   'root2':
     name: 'root2'
     templateName: 'null-resource-1'
-    workspace: 'root123521123-gili13'
+    workspace: 'root123521123-g123ili13'
     revision: 'main'
