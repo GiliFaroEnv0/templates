@@ -9,6 +9,6 @@ resource "null_resource" "null4" {
 
 variable "DWARF" {
     type        = string
-    default = "Oi"
+    default = "Oi54654654"
     description = "my little dwarf"
 }
