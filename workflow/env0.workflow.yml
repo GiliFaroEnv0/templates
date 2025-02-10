@@ -12,7 +12,17 @@ environments:
       repository: 'https://github.com/GiliFaroEnv0/templates'
       path: 'null-resource'
       githubInstallationId: 55012928.00
-
     workspace: 'ro12323423f223f6542f2f23v34f34fv3321'
+    revision: 'main'
+    needs: [ root1 ]
+  'new-vcs':
+    name: 'root3'
+    vcs:
+      type: 'terraform'
+      terraformVersion: 'latest'
+      repository: 'https://github.com/GiliFaroEnv0/templates'
+      path: 'null-resource'
+      githubInstallationId: 55012928.00
+    workspace: 'ro12323423f223f6542f2f23v34f34fv33213'
     revision: 'main'
     needs: [ root1 ]
