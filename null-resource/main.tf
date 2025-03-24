@@ -2,7 +2,7 @@
 resource "null_resource" "null1" {
 }
 
-resource "null_resource" "null3" {
+resource "null_resource" "null2" {
 }
 
 variable "DWARF" {
