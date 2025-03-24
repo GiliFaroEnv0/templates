@@ -1,8 +1,4 @@
 
-resource "null_resource" "null1" {
-
-
-}
 
 resource "null_resource" "example" {
   count = var.instance_count
