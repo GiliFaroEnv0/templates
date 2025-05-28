@@ -1,6 +1,6 @@
 
 
-resource "null_resource" "example" {
+resource "null_resoure" "example" {
   count = var.instance_count
 
   provisioner "local-exec" {
