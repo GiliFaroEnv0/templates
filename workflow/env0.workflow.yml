@@ -1,12 +1,12 @@
 environments:
   migrations sdf:
-    name: migrations sdf
+    name: "migrations sdf"
     vcs:
-      type: opentofu
-      opentofuVersion: latest
-      repository: https://github.com/env0/migrations
-      path: sdf
+      type: "opentofu"
+      opentofuVersion: "latest"
+      repository: "https://github.com/env0/migrations"
+      path: "sdf"
       githubInstallationId: 11477608
-    revision: mig-073-migrate-state-files-to-table
-    workspace: env0952163
+    revision: "mig-073-migrate-state-files-to-table"
+    workspace: "env0952163"
     needs:
