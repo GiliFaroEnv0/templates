@@ -1,11 +1,12 @@
 environments:
-  'root1':
-    name: 'root1'
-    templateName: 'null-resource-1'
-    workspace: 'root1235211233123-gili1'
-    revision: 'main'
-  'root2':
-    name: 'root2'
-    templateName: 'null-resource-1'
-    workspace: 'root123521123-g123ili13'
-    revision: 'main'
+  migrations sdf:
+    name: migrations sdf
+    vcs:
+      type: opentofu
+      opentofuVersion: latest
+      repository: https://github.com/env0/migrations
+      path: sdf
+      githubInstallationId: 11477608
+    revision: mig-073-migrate-state-files-to-table
+    workspace: env0952163
+    needs:
