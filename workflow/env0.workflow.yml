@@ -9,3 +9,7 @@ environments:
       githubInstallationId: 11477608
     revision: "mig-073-migrate-state-files-to-table"
     workspace: "env0952163"
+  Gilli null-16857:
+    name: "Gilli null-16857"
+    templateName: "Gilli null"
+    workspace: "env0bbb668"
