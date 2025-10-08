@@ -8,7 +8,7 @@ environments:
     needs:
       - first
   third:
-    name: third
+    name: third3
     templateName: 'null-resource'
     needs:
       - first
